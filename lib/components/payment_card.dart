@@ -18,8 +18,9 @@ class PaymentCard extends StatelessWidget {
     final double screenWidth = MediaQuery.of(context).size.width;
     final double screenHeight = MediaQuery.of(context).size.height;
     return  Container(
-       margin: const EdgeInsets.all(8),
-       padding: const EdgeInsets.symmetric(vertical: 18, horizontal: 12),
+       width: screenWidth / 2.2,
+       margin: const EdgeInsets.all(6),
+       padding: const EdgeInsets.only(top: 12, bottom: 2 ,left: 6, right: 6),
        decoration: BoxDecoration(
         color: Theme.of(context).cardColor,
         borderRadius: BorderRadius.circular(18),

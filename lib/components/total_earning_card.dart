@@ -41,61 +41,59 @@ class TotalEarningCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
-         Container(
-            margin: EdgeInsets.all(20),
-           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            children: [
-              Container(
-                 height: 34,
-                 width: 80,
-                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 38, 42, 61),
-                  borderRadius: BorderRadius.circular(18),
-                 ),
-                 child: const Center(
-                    child: Text('D', style: TextStyle(color: Colors.white),),
-                 ),
-              ),
-              const SizedBox(width: 4),
-              Container(
-                 height: 34,
-                 width: 80,
-                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 38, 42, 61),
-                  borderRadius: BorderRadius.circular(18),
-                 ),
-                 child: const Center(
-                    child: Text('W', style: TextStyle(color: Colors.white),),
-                 ),
-              ),
-              const SizedBox(width: 4),
-              Container(
-                 height: 34,
-                 width: 80,
-                 decoration: BoxDecoration(
-                  color: Theme.of(context).primaryColor,
-                  borderRadius: BorderRadius.circular(18),
-                 ),
-                 child: Center(
-                    child: Text('M', style: TextStyle(color: Colors.white),),
-                 ),
-              ),
-              const SizedBox(width: 4),
-              Container(
-                height: 34,
-                 width: 80,
-                 decoration: BoxDecoration(
-                  color: Color.fromARGB(255, 38, 42, 61),
-                  borderRadius: BorderRadius.circular(18),
-                 ),
-                 child: const Center(
-                    child: Text('Y', style: TextStyle(color: Colors.white),),
-                 ),
-              ),
-            ],
-           ),
+         Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            Container(
+               height: 34,
+               width: 80,
+               decoration: BoxDecoration(
+                color: Color.fromARGB(255, 38, 42, 61),
+                borderRadius: BorderRadius.circular(18),
+               ),
+               child: const Center(
+                  child: Text('D', style: TextStyle(color: Colors.white),),
+               ),
+            ),
+            const SizedBox(width: 4),
+            Container(
+               height: 34,
+               width: 80,
+               decoration: BoxDecoration(
+                color: Color.fromARGB(255, 38, 42, 61),
+                borderRadius: BorderRadius.circular(18),
+               ),
+               child: const Center(
+                  child: Text('W', style: TextStyle(color: Colors.white),),
+               ),
+            ),
+            const SizedBox(width: 4),
+            Container(
+               height: 34,
+               width: 80,
+               decoration: BoxDecoration(
+                color: Theme.of(context).primaryColor,
+                borderRadius: BorderRadius.circular(18),
+               ),
+               child: Center(
+                  child: Text('M', style: TextStyle(color: Colors.white),),
+               ),
+            ),
+            const SizedBox(width: 4),
+            Container(
+              height: 34,
+               width: 80,
+               decoration: BoxDecoration(
+                color: Color.fromARGB(255, 38, 42, 61),
+                borderRadius: BorderRadius.circular(18),
+               ),
+               child: const Center(
+                  child: Text('Y', style: TextStyle(color: Colors.white),),
+               ),
+            ),
+          ],
          ),
+         const SizedBox(height: 12),
          SizedBox(
           height: MediaQuery.of(context).size.height * 0.25,
           child: BarGraph()
