@@ -41,58 +41,71 @@ class TotalEarningCard extends StatelessWidget {
             ],
           ),
           const SizedBox(height: 12),
+         // ...existing code...
          Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            Container(
-               height: 34,
-               width: 80,
-               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 38, 42, 61),
-                borderRadius: BorderRadius.circular(18),
-               ),
-               child: const Center(
-                  child: Text('D', style: TextStyle(color: Colors.white),),
-               ),
-            ),
-            const SizedBox(width: 4),
-            Container(
-               height: 34,
-               width: 80,
-               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 38, 42, 61),
-                borderRadius: BorderRadius.circular(18),
-               ),
-               child: const Center(
-                  child: Text('W', style: TextStyle(color: Colors.white),),
-               ),
-            ),
-            const SizedBox(width: 4),
-            Container(
-               height: 34,
-               width: 80,
-               decoration: BoxDecoration(
-                color: Theme.of(context).primaryColor,
-                borderRadius: BorderRadius.circular(18),
-               ),
-               child: Center(
-                  child: Text('M', style: TextStyle(color: Colors.white),),
-               ),
-            ),
-            const SizedBox(width: 4),
-            Container(
-              height: 34,
-               width: 80,
-               decoration: BoxDecoration(
-                color: Color.fromARGB(255, 38, 42, 61),
-                borderRadius: BorderRadius.circular(18),
-               ),
-               child: const Center(
-                  child: Text('Y', style: TextStyle(color: Colors.white),),
-               ),
+            LayoutBuilder(
+              builder: (context, constraints) {
+                final parentWidth = MediaQuery.of(context).size.width;
+                final buttonWidth = (parentWidth - 48) / 5; // 48 for padding and gaps
+
+                return Row(
+                  children: [
+                    Container(
+                      height: 34,
+                      width: buttonWidth,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 38, 42, 61),
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      child: const Center(
+                        child: Text('D', style: TextStyle(color: Colors.white)),
+                      ),
+                    ),
+                    const SizedBox(width: 4),
+                    Container(
+                      height: 34,
+                      width: buttonWidth,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 38, 42, 61),
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      child: const Center(
+                        child: Text('W', style: TextStyle(color: Colors.white)),
+                      ),
+                    ),
+                    const SizedBox(width: 4),
+                    Container(
+                      height: 34,
+                      width: buttonWidth,
+                      decoration: BoxDecoration(
+                        color: Theme.of(context).primaryColor,
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      child: const Center(
+                        child: Text('M', style: TextStyle(color: Colors.white)),
+                      ),
+                    ),
+                    const SizedBox(width: 4),
+                    Container(
+                      height: 34,
+                      width: buttonWidth,
+                      decoration: BoxDecoration(
+                        color: Color.fromARGB(255, 38, 42, 61),
+                        borderRadius: BorderRadius.circular(18),
+                      ),
+                      child: const Center(
+                        child: Text('Y', style: TextStyle(color: Colors.white)),
+                      ),
+                    ),
+                  ],
+                );
+              }
             ),
           ],
          ),
+// ...existing code...
          const SizedBox(height: 12),
          SizedBox(
           height: MediaQuery.of(context).size.height * 0.25,

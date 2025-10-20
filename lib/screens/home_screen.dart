@@ -33,7 +33,7 @@ class HomeScreen extends StatelessWidget {
                 color: Colors.transparent, // optional background color
               ),
               child: Image.asset(
-                'assets/profile.png',
+                'assets/user01.png',
                 fit: BoxFit.cover,
               ),
             ),
