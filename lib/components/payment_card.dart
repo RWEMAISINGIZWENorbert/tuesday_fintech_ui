@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class PaymentCard extends StatelessWidget {
-  final Icon icon;
+  final String icon;
   final String name;
   final String amount;
   final String date;
@@ -33,7 +33,7 @@ class PaymentCard extends StatelessWidget {
             children: [
                CircleAvatar(
                 backgroundColor: Color.fromARGB(255, 38, 42, 61),
-                child:  Center(child: icon),
+                child:  Center(child: Image.asset(icon, fit: BoxFit.cover, height: 24, width: 24,)),
                ),
                const SizedBox(width: 25),
                 Text(

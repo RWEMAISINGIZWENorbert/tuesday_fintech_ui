@@ -79,12 +79,20 @@ class StaticsScreen extends StatelessWidget {
                      scrollDirection: Axis.horizontal,
                      itemCount: 2,
                      itemBuilder: (context, index){
-                       return PaymentCard(
-                                 icon: Icon(Icons.trending_down, color: Theme.of(context).primaryColor,),
-                                 name: 'Credit Card',
+                       if(index == 0)  {
+                        return   PaymentCard(
+                                //  icon: Icon(Icons.trending_down, color: Theme.of(context).primaryColor,),
+                                 icon: 'assets/behance.png',
+                                 name: 'Behance',
                                  amount: '\$5,200.00',
                                  date: 'Aug 20, 2023',
-                     );
+                     ); } else{
+                     return PaymentCard(
+                      icon: "assets/upwork.png",
+                      name: 'Upwork',
+                      amount: '\$3,200.00',
+                      date: 'Aug 21, 2023'
+                      );}
                     }),
                  ),
                   SizedBox(
@@ -93,12 +101,19 @@ class StaticsScreen extends StatelessWidget {
                                     scrollDirection: Axis.horizontal,
                                     itemCount: 2,
                                     itemBuilder: (context, index){
-                                      return PaymentCard(
-                           icon: Icon(Icons.trending_down, color: Theme.of(context).primaryColor,),
-                           name: 'Credit Card',
+                                 if( index == 0 ) { return PaymentCard(
+                           icon: 'assets/github.png',
+                           name: 'github',
                            amount: '\$5,200.00',
                            date: 'Aug 20, 2023',
+                                    ); }else {
+                                       return PaymentCard(
+                                      icon: 'assets/dribble.png',
+                                      name: 'Dribble',
+                                      amount: '\$5,200.00',
+                                      date: 'Aug 20, 2023',
                                     );
+                                    }
                                }),
                   ),
                   // child: GridView.count(
