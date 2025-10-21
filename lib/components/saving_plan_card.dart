@@ -19,7 +19,7 @@ class SavingPlanCard extends StatelessWidget {
     final double screenHeight = MediaQuery.of(context).size.height;
     print("The Screen Width $screenWidth");
     return SizedBox(
-      width: screenWidth <= 492 ? screenWidth / 3 : screenWidth / 4,
+      width: screenWidth <= 360 ? screenWidth / 2 :  screenWidth <= 492 ? screenWidth / 3 : screenWidth / 4,
       height: screenHeight <= 714 ? 178.5 : screenHeight / 4,
       child: Container(
         padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 12),
