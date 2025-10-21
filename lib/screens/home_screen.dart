@@ -182,8 +182,16 @@ class HomeScreen extends StatelessWidget {
                       :  index == 1
                       ? Icon(IconlyLight.calendar, color: Color.fromARGB(255, 53, 179, 89), size: 28)
                       : Icon(IconlyLight.wallet, color: Color.fromARGB(255, 190, 147, 5), size: 28),
-                      name: 'By Macbook', 
-                      amount: "\$100k"
+                      name: 
+                      index == 0 
+                      ? 'By Macbook'
+                      : index == 1
+                      ? 'Investment' : 'New House', 
+                      amount: index == 0
+                      ? "\$80k"
+                      : index == 1 
+                      ? "\$200k" : "\$400k",
+                      perAmount: index == 0 ? "100k" : null,
                       );
                   }
                   ),

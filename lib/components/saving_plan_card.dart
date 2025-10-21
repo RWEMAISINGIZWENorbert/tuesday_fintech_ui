@@ -55,7 +55,7 @@ class SavingPlanCard extends StatelessWidget {
                     style: Theme.of(context).textTheme.displaySmall!.copyWith(color: Colors.white),
                   ),
                  if(perAmount != null)  TextSpan(
-                    text: "/$perAmount",
+                    text: "\\$perAmount",
                     style: Theme.of(context).textTheme.displaySmall,
                   ) else const TextSpan(),
                 ],
